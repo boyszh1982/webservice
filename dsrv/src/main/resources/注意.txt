@@ -1,0 +1,2 @@
+需要增加webservice-security
+http://www.blogjava.net/zljpp/archive/2012/04/15/374371.html

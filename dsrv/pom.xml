@@ -1,0 +1,230 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>dsrv</groupId>
+	<artifactId>dsrv</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>dsrv Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<org.springframework.version>4.1.7.RELEASE</org.springframework.version>
+	</properties>
+
+	<dependencies>
+		<!-- tag::junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- end::junit -->
+
+		<!-- tag::log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<!-- end::log4j -->
+
+		<!-- tag::datasource -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.38</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<!-- end::datasource -->
+
+		<!-- tag::spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<!-- end::spring -->
+
+		<!-- tag::cxf -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxws</artifactId>
+			<version>3.1.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http</artifactId>
+			<version>3.1.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-codegen-plugin</artifactId>
+			<version>3.1.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-tools-wsdlto-databinding-jaxb</artifactId>
+			<version>3.1.5</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/libs/cxf-tools-wsdlto-databinding-jaxb-3.1.5.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-tools-wsdlto-frontend-javascript</artifactId>
+			<version>3.1.5</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/libs/cxf-tools-wsdlto-frontend-javascript-3.1.5.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-security</artifactId>
+			<version>3.1.5</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/libs/cxf-rt-security-3.1.5.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-ws-security</artifactId>
+			<version>3.1.5</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/libs/cxf-rt-ws-security-3.1.5.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.ws.security</groupId>
+			<artifactId>wss4j</artifactId>
+			<version>1.6.19</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.xmlbeans</groupId>
+			<artifactId>xmlbeans</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.neethi</groupId>
+			<artifactId>neethi</artifactId>
+			<version>3.0.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.wss4j</groupId>
+			<artifactId>wss4j-ws-security-common</artifactId>
+			<version>2.1.4</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/libs/wss4j-ws-security-common-2.1.4.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.wss4j</groupId>
+			<artifactId>wss4j-ws-security-dom</artifactId>
+			<version>2.1.4</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/libs/wss4j-ws-security-dom-2.1.4.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.wss4j</groupId>
+			<artifactId>wss4j-ws-security-policy-stax</artifactId>
+			<version>2.1.4</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/libs/wss4j-ws-security-policy-stax-2.1.4.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.wss4j</groupId>
+			<artifactId>wss4j-ws-security-stax</artifactId>
+			<version>2.1.4</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/libs/wss4j-ws-security-stax-2.1.4.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.santuario</groupId>
+			<artifactId>xmlsec</artifactId>
+			<version>2.0.5</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/libs/xmlsec-2.0.5.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.10</version>
+		</dependency>
+
+		<!-- end::cxf -->
+
+		<!-- tag::others -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>3.0-alpha-1</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.7</version>
+		</dependency>
+		<!-- end::others -->
+
+	</dependencies>
+	<repositories>
+		<repository>
+			<id>temp</id>
+			<name>temp</name>
+			<!-- <url>http://mirrors.ibiblio.org/pub/mirrors/maven2/</url> -->
+			<url>http://maven.oschina.net/content/groups/public/</url>
+			<layout>default</layout>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	<build>
+		<finalName>dsrv</finalName>
+		<plugins>
+			<!-- 编译时将本地JAR打包 -->
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<encoding>UTF-8</encoding>
+					<compilerArguments>
+						<extdirs>${basedir/libs}</extdirs>
+					</compilerArguments>
+				</configuration>
+			</plugin>
+			<!-- 本地包导入War包 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<webResources>
+						<resource>
+							<directory>${project.basedir}/libs</directory>
+							<targetPath>WEB-INF/lib</targetPath>
+							<filtering>false</filtering>
+							<includes>
+								<include>**/*.jar</include>
+							</includes>
+						</resource>
+					</webResources>
+				</configuration>
+				<version>2.1.1</version>
+			</plugin>
+
+		</plugins>
+	</build>
+
+</project>
